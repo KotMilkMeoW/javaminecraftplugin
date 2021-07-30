@@ -1,5 +1,5 @@
 name: First plugin
-main: str.Main
+main: core.str.Main
 author: KotMilkMeoW
 version: 0.1
 description: First plugin
