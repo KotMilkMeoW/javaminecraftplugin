@@ -1,4 +1,4 @@
-name: First plugin
+name: Firstplugin
 main: core.str.Main
 author: KotMilkMeoW
 version: 0.1
