@@ -1,4 +1,4 @@
-package core.core;
+package core.str;
 
 import org.bukkit.Bukkit;
 
