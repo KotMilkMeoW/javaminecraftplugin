@@ -1,5 +1,5 @@
-name: Firstplugin
+name: firstplugin
 main: com.javaminecraftplugin.codeplugin.Main
 author: KotMilkMeoW
 version: 0.1
-description: First plugin
+description: "First plugin"
