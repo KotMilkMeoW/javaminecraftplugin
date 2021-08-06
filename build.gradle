@@ -10,6 +10,22 @@ compileJava.options.encoding = "UTF-8"
 
 compileTestJava.options.encoding = "UTF-8"
 
+bukkit {
+    version = "1.12.2"
+    
+    meta {
+        name = "Docs"
+        description = "Plugin component of the Docs tool, a system for generating both web and ingame documentation from one source for Minecraft servers"
+        main = "com.miclesworkshop.docs.DocsPlugin"
+        url = "https://www.miclesworkshop.com" // Attribute website
+        authors = ["MicleBrick", "Contributors"]
+    }
+    run {
+        core = "paper"
+        eula = true
+    }
+}
+
 repositories {
     mavenCentral()
     maven { url = "https://repo.aikar.co/content/groups/aikar/" }
