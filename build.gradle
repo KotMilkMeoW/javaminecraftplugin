@@ -10,45 +10,21 @@ compileJava.options.encoding = "UTF-8"
 
 compileTestJava.options.encoding = "UTF-8"
 
-repositories{
-
-    mavenCentral()
-
-    
-
-}
 repositories {
-  mavenCentral() // This is needed for dependencies.
-   /*
-   As Spigot-API depends on the Bungeecord ChatComponent-API,
-  we need to add the Sonatype OSS repository, as Gradle,
-  in comparison to maven, doesn't want to understand the ~/.m2
-  directory unless added using mavenLocal(). Maven usually just gets
-  it from there, as most people have run the BuildTools at least once.
-  This is therefore not needed if you're using the full Spigot/CraftBukkit,
-  or if you're using the Bukkit API.
-  */
-  maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
-  maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
-  maven{ url 'https://www.jitpack.io' }
-// mavenLocal() // This is needed for CraftBukkit and Spigot.
+    mavenCentral()
+    maven { url = "https://repo.aikar.co/content/groups/aikar/" }
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url = 'https://repo.eclipse.org/content/groups/releases/' }
 }
 
 dependencies {
-  compile 'org.bukkit:craftbukkit:1.8.8-R0.1-SNAPSHOT'// The full CraftBukkit server with no shadowing. Requires mavenLocal.
+    compileOnly 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.51"
+    compile "co.aikar:acf-paper:0.5.0-SNAPSHOT"
+    compile "org.eclipse.jgit:org.eclipse.jgit:5.0.1.201806211838-r"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 jar{
 
