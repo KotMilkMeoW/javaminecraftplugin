@@ -1,0 +1,5 @@
+name: javaminecraftplugin
+author: KotMilkMeoW
+version: "0.1"
+main: com.javaminecraftplugin.codeplugin.Main
+description: "Plugin"
